@@ -1,6 +1,8 @@
 import React, { Component} from 'react';
 import PropTypes from 'prop-types';
 
+import Category from './Category';
+
 class App extends Component {
     constructor(props) {
         super(props);
@@ -9,9 +11,12 @@ class App extends Component {
     }
 
     render() {
+        const { gameData } = this.props;
         return (
             <div>
-                Get to work! Right now! JUST DO IT
+                {gameData.categories.map( (cat, idx) => (
+                    <Category key={idx} topic={cat.topic} questions={cat.questions}/>
+                ))}
             </div>
         )
     }
