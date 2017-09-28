@@ -1,0 +1,14 @@
+{
+    "presets": ['env'],
+    "plugins": [
+        'transform-react-jsx',
+        ['module-resolver', {
+            "root": ["./ui"],
+            "alias": {
+                "components": "js/components",
+                "style": "style",
+                "js": "js"
+            }
+        }]
+    ]
+}
