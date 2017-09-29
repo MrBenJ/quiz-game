@@ -12,6 +12,7 @@ body {
 .category {
     display: inline-block;
     width: 20%;
+    vertical-align: middle;
 }
 
 .category-title {
@@ -30,9 +31,15 @@ body {
     font-size: 20px;
     border: 1px solid white;
 
+
     &:hover {
         background-color: black;
         color: white;
+    }
+
+    &.selected:hover {
+        background-color: lightblue;
+        color: black;
     }
 }
 

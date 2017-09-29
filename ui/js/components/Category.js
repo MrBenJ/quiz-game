@@ -8,6 +8,18 @@ class Category extends Component {
     constructor(props) {
         super(props);
         this.displayName = 'Category';
+
+        this.onSelectQuestion = this.onSelectQuestion.bind(this);
+    }
+
+    onSelectQuestion(question) {
+        if(!this.props.questionSelected) {
+            question.setState({
+                isSelected: true
+            });
+
+            this.props.onSelectQuestion();
+        }
     }
 
     render() {
@@ -16,7 +28,13 @@ class Category extends Component {
                 <CategoryTitle>{this.props.topic}</CategoryTitle>
                 {this.props.questions.map( (quest, idx) => {
                     return (
-                        <Question key={idx} data={quest} />
+                        <Question
+                            key={idx}
+                            data={quest}
+                            onSelectQuestion={this.onSelectQuestion}
+                            onAnswerSubmit={this.props.onAnswerSubmit}
+                            isPlayer1Turn={this.props.isPlayer1Turn}
+                        />
                     );
                 })}
             </div>
@@ -26,7 +44,11 @@ class Category extends Component {
 
 Category.propTypes = {
     topic: PropTypes.string.isRequired,
-    questions: PropTypes.array.isRequired
+    questions: PropTypes.array.isRequired,
+    onSelectQuestion: PropTypes.func.isRequired,
+    questionSelected: PropTypes.bool.isRequired,
+    onAnswerSubmit: PropTypes.func.isRequired,
+    isPlayer1Turn: PropTypes.bool.isRequired
 };
 
 export default Category;

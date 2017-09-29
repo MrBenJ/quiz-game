@@ -6,7 +6,9 @@ import ReactDOM from 'react-dom';
 import App from 'js/components/App';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'vanillatoasts/vanillatoasts.css';
 import 'style/stylesheet.scss';
+
 
 const gameData = {
     categories: [
