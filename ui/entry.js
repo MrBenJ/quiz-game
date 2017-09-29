@@ -82,13 +82,13 @@ const gameData = {
                 },
                 {
                     value: 200,
-                    display: "True or false: React Components and WebComponents are the same.",
+                    display: "True or false: VR and AR are the same thing.",
                     answer: "false"
                 },
                 {
                     value: 300,
-                    display: "True or false: You need to use Redux with React.",
-                    answer: "false"
+                    display: "HTC vive was a partnership between HTC and what other gaming company?",
+                    answer: "valve"
                 },
                 {
                     value: 400,
@@ -97,7 +97,7 @@ const gameData = {
                 },
                 {
                     value: 500,
-                    display: "True or false: If you use ReactJS after midnight, you have to beg Facebook to let you leave your computer",
+                    display: "True or false: Obama's chemtrails plan turned my frog gay",
                     answer: "false"
                 }
             ]
