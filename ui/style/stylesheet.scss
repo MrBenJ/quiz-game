@@ -8,3 +8,44 @@ body {
     background-color: lightblue;
 
 }
+
+.category {
+    display: inline-block;
+    width: 20%;
+    vertical-align: middle;
+}
+
+.category-title {
+    height: 100px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 30px;
+    border: 1px solid white;
+
+}
+
+.question {
+    height: 200px;
+    position: relative;
+    text-align: center;
+    font-size: 20px;
+    border: 1px solid white;
+
+
+    &:hover {
+        background-color: black;
+        color: white;
+    }
+
+    &.selected:hover {
+        background-color: lightblue;
+        color: black;
+    }
+}
+
+.question-value {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
