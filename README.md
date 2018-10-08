@@ -1,5 +1,7 @@
 # Quiz Game in React!
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/MrBenJ/quiz-game.svg)](https://greenkeeper.io/)
+
 A dumb quiz game with dumber questions - made for a React JS class with JavascriptLA
 
 ## Install
